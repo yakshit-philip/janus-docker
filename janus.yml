@@ -6,8 +6,9 @@ services:
     build:
       context: .
       dockerfile: ./compose/janus/Dockerfile
-    volumes:
-      - /etc/letsencrypt:/etc/letsencrypt
+    # only required for https connection this place letsencrypt should hold the cert files 
+    #volumes:
+    #  - /etc/letsencrypt:/etc/letsencrypt
     ports:
       - 7889:7889
       - 8088:8088
